@@ -485,5 +485,3 @@ async function checkPaperBuild() {
         resultDiv.innerHTML = `Latest Build: <br><span style="color:#00ffcc; font-size:1.5rem; font-weight:bold;">#${data.builds[data.builds.length - 1]}</span>`;
     } catch(e) { resultDiv.innerHTML = `<span style="color:red;">Error fetching data.</span>`; }
 }
-;">Error fetching data.</span>`; }
-}
