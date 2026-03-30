@@ -279,7 +279,7 @@ async function loadGitHubCodes() {
     if(!container) return;
 
     try {
-        const res = await fetch(`https://api.github.com/repo/skahost/paneldsh/contents/`);
+        const res = await fetch(`https://api.github.com/repos/skahost/paneldsh/contents/`);
         if (!res.ok) throw new Error("API limits.");
         const files = await res.json();
         const textFiles = files.filter(f => f.name.toLowerCase().endsWith('.text'));
