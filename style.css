@@ -7,7 +7,7 @@
 
 /* ✅ 1. BACKGROUND & SCROLLBAR */
 body { 
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.8)), url('CCCCCCCCCCCCCCC.JPG') no-repeat center center fixed; 
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.8)), url('88e5540465d258ab1d271bfc11189533.gif') no-repeat center center fixed; 
     background-size: cover; color: #fff; min-height: 100vh; 
 }
 ::-webkit-scrollbar { width: 6px; height: 6px; }
