@@ -27,9 +27,9 @@ function forceLoadNavbar() {
     let navHTML = `
     <nav class="navbar">
         <div class="logo">
-            <video src="["********YOUR LOGO******"]" autoplay loop muted playsinline class="logo-video"></video>
+            <video src="gemini_generated_video_c03390f3.mp4" autoplay loop muted playsinline class="logo-video"></video>
             <div class="logo-text">
-                <span class="main-title">"******YOUR NAME*******"</span>
+                <span class="main-title">SKA HOST</span>
                 <span class="sub-title">DASHBOARD</span>
             </div>
         </div>
@@ -44,10 +44,10 @@ function forceLoadNavbar() {
         </ul>
         <div class="user-profile" onclick="toggleProfileModal()">
             <div class="user-text">
-                <span class="user-name">"********YOUR NAME******"</span>
+                <span class="user-name">SKA HOST</span>
                 <span class="user-role">Owner</span>
             </div>
-            <video src="["********YOUR LOGOO*******"]" autoplay loop muted playsinline class="user-profile-video"></video>
+            <video src="gemini_generated_video_c03390f3.mp4" autoplay loop muted playsinline class="user-profile-video"></video>
         </div>
     </nav>`;
 
@@ -61,7 +61,7 @@ function createProfileModal() {
     <div id="profileModal" class="modal-overlay" style="display:none;" onclick="closeProfileModal(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
             <div class="modal-header">
-                <video src="["********YOUR LOGO*****"]" autoplay loop muted playsinline class="modal-avatar-video"></video>
+                <video src="gemini_generated_video_c03390f3.mp4" autoplay loop muted playsinline class="modal-avatar-video"></video>
                 <button class="close-btn" onclick="toggleProfileModal()"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
@@ -74,11 +74,11 @@ function createProfileModal() {
                 <div class="grid-2-col mt-10">
                     <div class="info-box">
                         <p class="label">USER ID</p>
-                        <p class="value" style="font-family:monospace; font-size:0.8rem;">"***YOUR DISCORD ID*******"</p>
+                        <p class="value" style="font-family:monospace; font-size:0.8rem;">1472601008998846576</p>
                     </div>
                     <div class="info-box">
                         <p class="label">JOINED</p>
-                        <p class="value" style="font-size:0.8rem;">"*******YOUR NAME****"</p>
+                        <p class="value" style="font-size:0.8rem;">SDGAMER</p>
                     </div>
                 </div>
                 <button class="full-btn" onclick="toggleProfileModal()">Close Profile</button>
@@ -184,7 +184,7 @@ async function loadDownloadFiles(currentPath) {
     </div>`;
 
     try {
-        const res = await fetch(`https://api.github.com/repos/"******YOUR GITHUB USERNAME *****"/paneldsh/contents/${currentPath}`);
+        const res = await fetch(`https://api.github.com/repos/skahost/paneldsh/contents/${currentPath}`);
         if (!res.ok) throw new Error("API Limit ba path pawa jacche na.");
         
         const items = await res.json();
@@ -279,7 +279,7 @@ async function loadGitHubCodes() {
     if(!container) return;
 
     try {
-        const res = await fetch(`https://api.github.com/repos/"*********YOUR GITHUB USERNAME****"/paneldsh/contents/`);
+        const res = await fetch(`https://api.github.com/repo/skahost/paneldsh/contents/`);
         if (!res.ok) throw new Error("API limits.");
         const files = await res.json();
         const textFiles = files.filter(f => f.name.toLowerCase().endsWith('.text'));
@@ -398,7 +398,7 @@ async function loadYouTubeVideos() {
     if(!container) return;
     container.innerHTML = '<p style="color: #aaa;">Fetching videos... <i class="fas fa-spinner fa-spin"></i></p>';
     try {
-        const rssUrl = `"*********YOUR YOUTUBE URL******"`;
+        const rssUrl = `https://youtube.com/@skahosting?si=m2l3ZZo69UaRif_k`;
         const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`);
         const data = await res.json();
         if(data.status === 'ok' && data.items.length > 0) {
@@ -424,7 +424,7 @@ async function fetchDiscordTeam() {
     const container = document.getElementById('real-discord-members');
     if(!container) return;
     try {
-        const res = await fetch('https://discord.com/api/guilds/"*******DISCORD SERVER ID*****"/widget.json');
+        const res = await fetch('https://discord.com/api/guilds/1472601008998846576/widget.json');
         const data = await res.json();
         container.innerHTML = '';
         if(data.members && data.members.length > 0) {
@@ -440,7 +440,7 @@ async function fetchDiscordTeam() {
 // 📊 SERVER TOOLS API
 // ==========================================
 function copyCmd() {
-    navigator.clipboard.writeText("["********YOUR ONE LINE COMMAND*****"]").then(() => alert("Master Command Copied! 🔥"));
+    navigator.clipboard.writeText("bash <(curl -sL https://raw.githubusercontent.com/skahost/code/main/run.sh)").then(() => alert("Master Command Copied! 🔥"));
 }
 
 async function runPingTest() {
